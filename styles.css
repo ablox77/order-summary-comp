@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+    background-color: var(--Pale-blue);
+    height: calc(100vh - 1px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3rem;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+img {
+    max-width: 100%;
+    border-radius: .8rem .8rem 0 0;
+}
+
+.container {
+    background-color: var(--Very-pale-blue);
+    border-radius: 1rem;
+    text-align: center;
+}
+
+@media (min-width: 27rem) {
+    .container {
+        width: 27rem;
+    };
+}
+
+.order-summary-heading {
+    color: var(--Dark-blue);
+    margin: 2.5rem 0 1rem 0;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+.order-summary-details {
+    color: var(--Desaturated-blue);
+    padding: 0 3rem 0 3rem;
+}
+
+/*Plan Details
+--------------------*/
+.plan-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 1rem 3rem 2rem 3rem;
+    background: hsla(225, 100%, 94%, .25);
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    border-radius: .7rem;
+}
+
+.musical-note-img {
+    width: 40px;
+    height: auto;
+    justify-self: center;
+}
+
+.annual-plan-sub-container {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    justify-self: start;;
+}
+
+.annual-plan-name {
+    color: var(--Dark-blue);
+    font-weight: 900;
+}
+
+.annual-plan-price {
+    color: var(--Desaturated-blue);
+}
+
+.change-plan-link {
+    color: var(--Bright-blue);
+    justify-self: center;
+    align-self: center;
+    font-weight: 700;
+}
+
+/*Payment Buttons
+-------------------------*/
+.payment-button {
+    background-color: var(--Bright-blue);
+    margin: 1rem 3rem 1rem 3rem;
+    padding: 1rem .5rem 1rem .5rem;
+    color: var(--Very-pale-blue);
+    border-radius: .7rem;
+    box-shadow: 3px 10px 20px 1px lightgray;
+    font-weight: 700;
+}
+
+.payment-button:hover {
+    cursor: pointer;
+}
+
+.cancel-order-button {
+    color: var(--Desaturated-blue);
+    margin: 1rem 0 0 0;
+    padding: .5rem .5rem 2rem .5rem;
+    font-weight: 700;
+}
+
+.cancel-order-button-text:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 24rem) {
+    .container {
+        width: 20.4375rem;
+    }
+    .order-summary-heading {
+        margin: 1.5rem 0 1rem 0;
+        font-size: 1.43rem;
+        font-weight: 900;
+    }
+    .order-summary-details {
+        padding: 0 2rem 0 2rem;
+    }
+    .plan-details {
+        margin: 1.5rem;
+    }
+    .payment-button {
+        margin: 1rem 1.5rem 1rem 1.5rem;
+        padding: 1rem;
+        font-weight: 700;
+    }
+    .cancel-order-button {
+        font-weight: 700;
+    }
+}
